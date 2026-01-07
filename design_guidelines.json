@@ -1,0 +1,120 @@
+{
+  "identity": {
+    "name": "SurveyPro",
+    "persona": "E1: The Anti-AI Designer",
+    "archetype": "Swiss & High-Contrast",
+    "tone": "Professional, Objective, Trustworthy, Efficient"
+  },
+  "typography": {
+    "headings": {
+      "family": "Manrope, sans-serif",
+      "weights": ["600", "700", "800"],
+      "usage": "Use for all page titles, section headers, and widget titles. Tight tracking (-0.02em)."
+    },
+    "body": {
+      "family": "Inter, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "Use for all standard text, form labels, and data tables."
+    },
+    "mono": {
+      "family": "JetBrains Mono, monospace",
+      "usage": "Use for IDs, code snippets, or specific data values requiring alignment."
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#FFFFFF",
+      "foreground": "#0F172A",
+      "primary": "#0055FF",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#F1F5F9",
+      "secondary_foreground": "#0F172A",
+      "muted": "#F8F9FA",
+      "muted_foreground": "#64748B",
+      "accent": "#FF3333",
+      "border": "#E2E8F0",
+      "input": "#E2E8F0",
+      "ring": "#0055FF"
+    },
+    "chart_colors": [
+      "#0055FF",
+      "#33CC99",
+      "#FF3333",
+      "#FFCC00",
+      "#9933FF"
+    ],
+    "rules": [
+      "Use pure white (#FFFFFF) for card backgrounds.",
+      "Use off-white (#F8F9FA) for the main dashboard background to create separation.",
+      "Primary color (#0055FF) is for Primary Actions ONLY (Create Survey, Save).",
+      "Text must be high contrast (Slate 900 for headings, Slate 600 for body).",
+      "Avoid gradients. Use solid, bold colors."
+    ]
+  },
+  "layout": {
+    "spacing_scale": "Generous. Use p-6 or p-8 for cards. Gap-6 for grids.",
+    "grid_system": {
+      "dashboard": "Control Room Grid: grid-cols-1 md:grid-cols-3 lg:grid-cols-4. Gap-6.",
+      "survey_list": "List View: Single column, wide cards.",
+      "form_builder": "Focused View: Centered column, max-w-3xl."
+    },
+    "radius": "rounded-md (4px - 6px). Avoid large rounded corners (rounded-xl).",
+    "shadows": "Minimal. shadow-sm for cards. shadow-md for dropdowns/modals. No large diffuse shadows."
+  },
+  "components": {
+    "buttons": {
+      "style": "Flat, high contrast.",
+      "primary": "bg-primary text-white hover:bg-primary/90 rounded-md font-medium px-6 py-2.5",
+      "secondary": "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-md font-medium px-6 py-2.5",
+      "ghost": "hover:bg-accent/10 hover:text-accent rounded-md px-4 py-2"
+    },
+    "cards": {
+      "style": "bg-white border border-border rounded-md shadow-sm p-6. Header must be distinct."
+    },
+    "inputs": {
+      "style": "bg-white border-input focus:ring-2 focus:ring-primary/20 rounded-md h-10 px-3"
+    },
+    "navigation": {
+      "sidebar": "Fixed left, w-64, bg-white border-r border-border. Links: text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md px-3 py-2 transition-colors."
+    }
+  },
+  "visual_enhancers": {
+    "textures": "Subtle noise overlay on the sidebar or specific hero sections (optional).",
+    "icons": "Lucide React. Stroke width 1.5px or 2px. Color: CurrentColor.",
+    "motion": {
+      "hover": "transform: scale(0.98) on active buttons.",
+      "page_load": "Fade in (opacity 0 to 1) over 0.3s.",
+      "charts": "Draw animation on load."
+    }
+  },
+  "images": {
+    "login_hero": {
+      "url": "https://images.pexels.com/photos/2457284/pexels-photo-2457284.jpeg",
+      "alt": "Abstract geometric shapes representing data structure",
+      "usage": "Split screen login page, right side cover image."
+    },
+    "dashboard_empty_state": {
+      "url": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "alt": "Team collaborating",
+      "usage": "Use when no surveys exist yet."
+    }
+  },
+  "instructions_to_main_agent": [
+    "Implement the 'Control Room' grid for the dashboard analytics.",
+    "Use Recharts or Chart.js (via react-chartjs-2) for data visualization. Match the color palette defined above.",
+    "Ensure all forms use 'react-hook-form' with 'zod' validation.",
+    "Use 'sonner' for toast notifications.",
+    "Strictly follow the 'Swiss & High-Contrast' aesthetic. No blurry gradients.",
+    "Sidebar navigation must be persistent.",
+    "Authentication pages should use a split layout (Form Left, Image Right).",
+    "Add 'data-testid' to all interactive elements."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do not use generic centered layouts.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects sparingly (only for sticky headers/overlays).",
+    "Every interaction needs micro-animations.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Never use AI assistant Emoji characters."
+  ]
+}
